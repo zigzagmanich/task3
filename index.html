@@ -36,8 +36,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('sw.js')
-        .then(() => console.log('Service worker зарегистрирован'))
-        .catch(err => console.error('Ошибка при регистрации service worker:', err));
+        then(registration => {registration.update()});
     }
   </script>
 </body>
