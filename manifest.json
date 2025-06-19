@@ -1,0 +1,16 @@
+{
+  "name": "Geo Notes",
+  "short_name": "GeoNotes",
+  "start_url": "/task3/",
+  "scope": "/task3/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4caf50",
+  "icons": [
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

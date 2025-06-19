@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#2196f3" />
+  <title>Геозаметки</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script defer src="script.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Геозаметки</h1>
+  </header>
+
+  <main>
+  <div id="map-container">
+    <div id="map"></div>
+    <div id="center-crosshair"></div>
+  </div>
+
+  <section id="notes-container">
+    <div id="notes-list"></div>
+  </section>
+
+  <form id="note-form">
+    <textarea id="note-text" placeholder="Введите заметку..." required></textarea>
+    <button type="submit">Добавить заметку</button>
+  </form>
+</main>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log('Service worker зарегистрирован'))
+        .catch(err => console.error('Ошибка при регистрации service worker:', err));
+    }
+  </script>
+</body>
+</html>
